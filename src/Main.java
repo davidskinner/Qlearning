@@ -3,28 +3,22 @@ import java.util.Random;
 
 public class Main
 {
-
 	public static void log(String log)
 	{
 		System.out.println(log);
 	}
-
 	static final int[] startingPosition = {0, 0}; // top left
 	static final int[] endingPosition = {19, 9}; // bottom right
-
 	public static void main(String[] args)
 	{
-
-		int nX = 0;
-		int nY = 0;
+		int nX;
+		int nY;
 		int cX;
 		int cY;
 
 		Random rand = new Random();
 		QTable qtable = new QTable();
 		Qgrid grid = new Qgrid();
-
-//		log("The table size is: " + qtable.getTableSize());
 
 		cX = startingPosition[0];
 		cY = startingPosition[1];
@@ -33,7 +27,7 @@ public class Main
 		log("This ran for 3 minutes because it is doing\n" +
 				"one hundred million iterations.");
 
-		for (int i = 0; i < 10000000; i++)
+		for (int i = 0; i < 1000000; i++)
 		{
 			int action;
 			double randomness = .05;///.05
@@ -107,13 +101,11 @@ public class Main
 		{
 			temp[1] = y + 1;
 			return temp;
-
 		}
 		if (action == 2 && x - 1 > 0) // left
 		{
 			temp[0] = x - 1;
 			return temp;
-
 		}
 		if (action == 3 && x + 1 < 20) // right
 		{
