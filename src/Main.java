@@ -27,7 +27,7 @@ public class Main
 		log("This ran for 3 minutes because it is doing\n" +
 				"one hundred million iterations.");
 
-		for (int i = 0; i < 1000000; i++)
+		for (int i = 0; i < 100000000; i++)
 		{
 			int action;
 			double randomness = .05;///.05
