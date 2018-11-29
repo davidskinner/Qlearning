@@ -24,10 +24,10 @@ public class Main
 		cY = startingPosition[1];
 
 		log("");
-		log("This ran for 3 minutes because it is doing\n" +
-				"one hundred million iterations.");
+//		log("This ran for 3 minutes because it is doing\n" +
+//				"one hundred million iterations.");
 
-		for (int i = 0; i < 100000000; i++)
+		for (int i = 0; i < 10000000; i++)
 		{
 			int action;
 			double randomness = .05;///.05
@@ -60,8 +60,8 @@ public class Main
 
 			if(nX == endingPosition[0] && nY == endingPosition[1] || hitAWall(nX,nY) )
 			{
-				cX = 0;
-				cY =0;
+				cX = rand.nextInt(20);
+				cY =rand.nextInt(10);
 			}
 			else
 			{
